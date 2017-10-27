@@ -7,13 +7,13 @@ namespace VendingMachine.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class MachineController : IMigrationMetadata
+    public sealed partial class VirtualMachine : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(MachineController));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(VirtualMachine));
         
         string IMigrationMetadata.Id
         {
-            get { return "201710260132361_Machine Controller"; }
+            get { return "201710271424192_VirtualMachine"; }
         }
         
         string IMigrationMetadata.Source

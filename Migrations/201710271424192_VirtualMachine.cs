@@ -3,7 +3,7 @@ namespace VendingMachine.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class MachineController : DbMigration
+    public partial class VirtualMachine : DbMigration
     {
         public override void Up()
         {

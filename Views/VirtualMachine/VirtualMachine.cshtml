@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "VirtualMachine";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VM</title>
+</head>
+<body>
+    <div>
+        <h2>Confirmation Page</h2>
+
+        <style type="text/css">
+            #tbrole, .c {
+                border: double;
+            }
+        </style>
+
+        <input type="text" id="myText" value="Enter Code Here">
+
+        <p>Click the "Submit" button to Enter your confirmation code.</p>
+
+        <button onclick="myFunction()">Submit</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myText").value;
+                document.getElementById("demo").innerHTML = x;
+                startGame()
+            }
+        </script>
+        <script>
+            function startGame(){
+	            var option = parseInt(prompt("Please Enter the confirmation code you receieved from your order."));
+
+	            if(option === 1 || option === 2 || option === 3){
+	                alert("Your item has been dispensed. Thank you!");
+	            }
+	            else{
+	                alert("Invalid code.");
+	            }
+            }
+        </script> 
+    </div>
+</body>
+</html>

@@ -251,13 +251,10 @@
     <Compile Include="Controllers\ManagersController.cs" />
     <Compile Include="Controllers\PayPalController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\VirtualMachineController.cs" />
     <Compile Include="CustomFilter\Filter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710251346314_PullBeforeStripeBranch.cs" />
-    <Compile Include="Migrations\201710251346314_PullBeforeStripeBranch.Designer.cs">
-      <DependentUpon>201710251346314_PullBeforeStripeBranch.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201710251313006_update db after pull.cs" />
     <Compile Include="Migrations\201710251537414_Update after pull.cs" />
@@ -272,9 +269,9 @@
     <Compile Include="Migrations\201710261321013_update Matthew changes.Designer.cs">
       <DependentUpon>201710261321013_update Matthew changes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710260132361_Machine Controller.cs" />
-    <Compile Include="Migrations\201710260132361_Machine Controller.Designer.cs">
-      <DependentUpon>201710260132361_Machine Controller.cs</DependentUpon>
+    <Compile Include="Migrations\201710271424192_VirtualMachine.cs" />
+    <Compile Include="Migrations\201710271424192_VirtualMachine.Designer.cs">
+      <DependentUpon>201710271424192_VirtualMachine.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -370,6 +367,7 @@
     <Content Include="Views\Inventories\Details.cshtml" />
     <Content Include="Views\Inventories\Edit.cshtml" />
     <Content Include="Views\Inventories\Index.cshtml" />
+    <Content Include="Views\VirtualMachine\VirtualMachine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -380,9 +378,6 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710251346314_PullBeforeStripeBranch.resx">
-      <DependentUpon>201710251346314_PullBeforeStripeBranch.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710251537414_Update after pull.resx">
       <DependentUpon>201710251537414_Update after pull.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,8 +387,8 @@
     <EmbeddedResource Include="Migrations\201710261321013_update Matthew changes.resx">
       <DependentUpon>201710261321013_update Matthew changes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710260132361_Machine Controller.resx">
-      <DependentUpon>201710260132361_Machine Controller.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710271424192_VirtualMachine.resx">
+      <DependentUpon>201710271424192_VirtualMachine.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

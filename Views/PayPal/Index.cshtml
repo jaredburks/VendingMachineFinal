@@ -8,6 +8,7 @@
     <h1>Payment</h1>
     <div id="paypal-button-container"></div>
     <script>
+        var x;
         paypal.Button.render({
 
             env: 'sandbox', // sandbox | production
@@ -30,7 +31,7 @@
                     payment: {
                         transactions: [
                             {
-                                amount: { total: '0.01', currency: 'USD' }
+                                amount: { total: '1.00', currency: 'USD' }
                             }
                         ]
                     }
@@ -39,14 +40,43 @@
 
             // onAuthorize() is called when the buyer approves the payment
             onAuthorize: function(data, actions) {
-
+                //Random confirmation code
+                x = Math.floor((Math.random() * 9999) + 1);
                 // Make a call to the REST api to execute the payment
                 return actions.payment.execute().then(function() {
-                    window.alert('Payment Complete!');
+                    window.alert('Payment Complete! Your Confirmation Code is: ' + x);
                 });
             }
 
         }, '#paypal-button-container');
 
+        function enterCode() {
+            var option = parseInt(prompt("Please Enter the confirmation code you receieved from your order."));
+
+            if (option === 1276 || option === 0000 || option === 1234 || option === x) {
+                alert("Your item has been dispensed. Thank you!");
+            }
+            else {
+                alert("Invalid code.");
+            }
+        }
     </script>
+    <div>
+        <h2>Confirmation Page</h2>
+
+        <style type="text/css">
+            #tbrole, .c {
+                border: double;
+            }
+        </style>
+
+        <p>Click the "Submit" button to Enter your confirmation code.</p>
+        
+        <button onclick="enterCode()">Submit</button>
+
+        <p id="demo"></p>
+
+        
+    </div>
+
 </body>
